@@ -8,12 +8,12 @@ from langchain_community.tools import DuckDuckGoSearchRun
 # PAGE CONFIG
 # =========================
 st.set_page_config(
-    page_title="IPL Match AI",
+    page_title="Ask from Tathagata",
     page_icon="🏏",
     layout="centered"
 )
 
-st.title("🏏 IPL Match AI Assistant")
+st.title("🏏 Ask from Tathagata Nath")
 
 # =========================
 # LOAD API KEY
