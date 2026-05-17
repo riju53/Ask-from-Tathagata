@@ -39,7 +39,7 @@ search = DuckDuckGoSearchRun()
 # =========================
 query = st.text_input(
     "Ask a question",
-    value="give me latest GT vs KKR ipl match result"
+    #value="give me latest GT vs KKR ipl match result"
 )
 
 # =========================
