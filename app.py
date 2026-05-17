@@ -1,8 +1,6 @@
-
 # app.py
 
 import streamlit as st
-import os
 from langchain_groq import ChatGroq
 from langchain_community.tools import DuckDuckGoSearchRun
 from langgraph.prebuilt import create_react_agent
@@ -20,12 +18,9 @@ st.title("🏏 IPL Match Result AI Agent")
 st.write("Ask anything about IPL matches using LangGraph + Groq + DuckDuckGo Search")
 
 # =========================
-# API KEY
+# LOAD API KEY FROM secrets.toml
 # =========================
-groq_api_key = st.text_input(
-    "Enter GROQ API Key",
-    type="password"
-)
+groq_api_key = st.secrets["GROQ_API_KEY"]
 
 # =========================
 # USER INPUT
@@ -40,16 +35,10 @@ query = st.text_input(
 # =========================
 if st.button("Get Result"):
 
-    if not groq_api_key:
-        st.warning("Please enter your GROQ API key")
-        st.stop()
-
     try:
-        # Set environment variable
-        os.environ["GROQ_API_KEY"] = groq_api_key
-
         # Initialize model
         model = ChatGroq(
+            groq_api_key=groq_api_key,
             model="llama-3.3-70b-versatile",
             temperature=0
         )
