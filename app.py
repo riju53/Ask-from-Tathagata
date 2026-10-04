@@ -510,7 +510,7 @@ def search_tool(query: str):
     return response
 ```
 
-That's an important fix.
+That is an important fix.
 
 ### One more improvement I'd recommend
 
