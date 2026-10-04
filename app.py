@@ -517,9 +517,9 @@ That is an important fix.
 For a **resume-level project**, I would take this one step further and make the sidebar look like:
 
 ```text
-🧵 Conversations
+ Conversations
 
-➕ New Chat
+ New Chat
 
 Today
   💬 What is LangGraph?
