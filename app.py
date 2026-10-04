@@ -522,12 +522,12 @@ For a **resume-level project**, I would take this one step further and make the 
  New Chat
 
 Today
-  💬 What is LangGraph?
-  💬 Explain RAG architecture
+   What is LangGraph?
+   Explain RAG architecture
 
 Yesterday
-  💬 FastAPI deployment
-  💬 Machine Learning interview
+   FastAPI deployment
+   Machine Learning interview
 
 ────────────────────
 
