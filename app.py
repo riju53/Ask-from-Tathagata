@@ -529,7 +529,6 @@ Yesterday
    FastAPI deployment
    Machine Learning interview
 
-────────────────────
 
 ⚙️ Settings
 🗑️ Clear conversations
