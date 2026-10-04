@@ -6,3 +6,5 @@ langgraph==1.1.9
 requests==2.34.2
 streamlit==1.57.0
 ddgs==9.14.4
+langgraph-checkpoint-sqlite
+langchain-core
