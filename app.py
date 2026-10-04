@@ -459,7 +459,7 @@ test.db
 If the user then clicks:
 
 ```text
-➕ New Chat
+ New Chat
 ```
 
 a new UUID is generated:
