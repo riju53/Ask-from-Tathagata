@@ -429,18 +429,6 @@ You should get something like:
 ```text
  AI Research Assistant
 
-┌───────────────────────┬───────────────────────────────┐
-│ 🧵 Threads            │                               │
-│                       │   🤖 AI Research Assistant    │
-│ ➕ New Chat           │                               │
-│                       │   User: What is LangGraph?    │
-│ 🟢 What is LangGraph? │                               │
-│ 💬 Explain RAG        │   Assistant:                  │
-│ 💬 Python decorators  │   LangGraph is ...            │
-│                       │                               │
-│ Current Thread:       │   Ask me anything...          │
-│ abc123...             │                               │
-└───────────────────────┴───────────────────────────────┘
 ```
 
 ### How the thread system works
