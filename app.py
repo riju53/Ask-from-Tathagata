@@ -9,10 +9,6 @@ from langchain_community.tools import DuckDuckGoSearchRun
 from langgraph.prebuilt import create_react_agent
 
 
-# =========================================================
-# 1. STREAMLIT CONFIGURATION
-# =========================================================
-
 st.set_page_config(
     page_title="AI Research Assistant",
     page_icon="🤖",
@@ -20,12 +16,6 @@ st.set_page_config(
 )
 
 st.title("AI Research Assistant.")
-
-
-# =========================================================
-# 2. SQLITE CHECKPOINTER
-# =========================================================
-
 conn = sqlite3.connect(
     "test.db",
     check_same_thread=False
@@ -33,17 +23,6 @@ conn = sqlite3.connect(
 
 checkpointer = SqliteSaver(conn)
 
-
-# =========================================================
-# 3. GROQ MODEL
-# =========================================================
-
-# IMPORTANT:
-# Put your API key in .streamlit/secrets.toml
-#
-# GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
-
-#GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 GROQ_API_KEY = "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"
 
 model = ChatGroq(
@@ -51,10 +30,6 @@ model = ChatGroq(
     groq_api_key=GROQ_API_KEY
 )
 
-
-# =========================================================
-# 4. SEARCH TOOL
-# =========================================================
 
 search = DuckDuckGoSearchRun()
 
@@ -71,10 +46,6 @@ def search_tool(query: str):
 
     return response
 
-
-# =========================================================
-# 5. SYSTEM PROMPT
-# =========================================================
 
 SYSTEM_PROMPT = """
 Role:
@@ -108,29 +79,14 @@ Guidelines:
 - Keep the response well-structured and easy to read.
 """
 
-
-# =========================================================
-# 6. LANGGRAPH AGENT
-# =========================================================
-
 agent = create_react_agent(
     model=model,
     tools=[search_tool],
     checkpointer=checkpointer
 )
 
-
-# =========================================================
-# 7. SESSION STATE
-# =========================================================
-
 if "thread_id" not in st.session_state:
     st.session_state.thread_id = str(uuid.uuid4())
-
-
-# =========================================================
-# 8. THREAD FUNCTIONS
-# =========================================================
 
 def get_thread_ids():
     """
@@ -197,11 +153,6 @@ def get_thread_title(thread_id):
 
     return "New Conversation"
 
-
-# =========================================================
-# 9. SIDEBAR
-# =========================================================
-
 with st.sidebar:
 
     st.header("🧵 Threads")
@@ -262,22 +213,11 @@ with st.sidebar:
         f"`{st.session_state.thread_id}`"
     )
 
-
-# =========================================================
-# 10. CURRENT THREAD CONFIG
-# =========================================================
-
 config = {
     "configurable": {
         "thread_id": st.session_state.thread_id
     }
 }
-
-
-# =========================================================
-# 11. LOAD CURRENT CONVERSATION
-# =========================================================
-
 try:
 
     state = agent.get_state(config)
@@ -292,9 +232,6 @@ except Exception:
     messages = []
 
 
-# =========================================================
-# 12. DISPLAY CHAT HISTORY
-# =========================================================
 
 for message in messages:
 
@@ -327,9 +264,6 @@ for message in messages:
                 st.markdown(content)
 
 
-# =========================================================
-# 13. USER INPUT
-# =========================================================
 
 question = st.chat_input(
     "Ask me anything..."
