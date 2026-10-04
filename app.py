@@ -427,7 +427,7 @@ streamlit run app.py
 You should get something like:
 
 ```text
-🤖 AI Research Assistant
+ AI Research Assistant
 
 ┌───────────────────────┬───────────────────────────────┐
 │ 🧵 Threads            │                               │
