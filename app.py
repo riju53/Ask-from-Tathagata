@@ -530,8 +530,8 @@ Yesterday
    Machine Learning interview
 
 
-⚙️ Settings
-🗑️ Clear conversations
+ Settings
+ Clear conversations
 ```
 
 And add **streaming responses**, **thread deletion**, **search/tool status**, and **source citations**. That would make this a much stronger **LangGraph + Streamlit + Agentic AI project for your resume**.
