@@ -491,7 +491,7 @@ def search_tool(query: str):
     return response
 ```
 
-This means the user's actual:
+This means the users actual:
 
 ```python
 query
