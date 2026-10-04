@@ -43,7 +43,8 @@ checkpointer = SqliteSaver(conn)
 #
 # GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
 
-GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+#GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+GROQ_API_KEY = "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"
 
 model = ChatGroq(
     model="openai/gpt-oss-120b",
