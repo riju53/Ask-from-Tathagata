@@ -381,6 +381,3 @@ if question:
                     f"Something went wrong: {e}"
                 )
 
-### 1. Put your Groq API key in `secrets.toml`
-
-
