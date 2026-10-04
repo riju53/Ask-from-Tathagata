@@ -383,7 +383,6 @@ if question:
 
 ### 1. Put your Groq API key in `secrets.toml`
 
-**Do not put the API key directly inside `app.py`.** The key in your original code is exposed, so I recommend **revoking/rotating it** and creating a new one.
 
 Create:
 
