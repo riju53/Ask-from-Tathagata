@@ -20,7 +20,7 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("🤖 AI Research Assistant")
+st.title("AI Research Assistant.")
 
 
 # =========================================================
